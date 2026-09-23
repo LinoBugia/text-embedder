@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Eigene Arbeitslaeufe
+output/
+
+# Referenz-Korpus: nur die bge-m3-Variante gehoert ins Repo (58 MB).
+# Die uebrigen Modell-Varianten (z. B. qwen3 mit 2560 dim = 146 MB) bleiben
+# lokal - GitHub blockt Dateien ueber 100 MB.
+# Hinweis: reference-kb/ selbst darf NICHT ignoriert werden, sonst greift
+# die Ausnahme unten nicht (Git steigt in ignorierte Ordner nicht hinab).
+reference-kb/*
+!reference-kb/RefKB_bge-m3/
+
+# PyInstaller-Build
+build/
+dist/
+*.spec
+
+# macOS
+.DS_Store
+
+# Lokale Tool-Einstellungen (enthalten Pfade des eigenen Rechners)
+.claude/

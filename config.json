@@ -1,0 +1,23 @@
+{
+  "input_dir": "./input",
+  "output_dir": "./output",
+  "chunking": {
+    "mode": "markdown",
+    "marker": "---",
+    "max_tokens": 600,
+    "min_tokens": 30,
+    "title_depth": 3,
+    "redact_markdown": true,
+    "strip_yaml_header": true,
+    "strip_links_for_embedding": false,
+    "tokenizer": "heuristic"
+  },
+  "embedding": {
+    "provider": "ollama",
+    "model": "bge-m3",
+    "base_url": "http://localhost:11434",
+    "batch_size": 16,
+    "num_ctx": 8192,
+    "truncate": true
+  }
+}
